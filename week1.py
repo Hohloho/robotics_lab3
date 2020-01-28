@@ -7,7 +7,7 @@ def alphabet_position(input_string):
         output.append(number)
     output = np.array(output)
     output = output[output >= 0]
-    return output.strip
+    return output.strip()
 
 sentence = "The sunset sets at twelve o'clock"
 
