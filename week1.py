@@ -4,9 +4,10 @@ def alphabet_position(input_string):
     output = []
     for character in input_string:
         number = ord(character) - 96
-        output.append(number)
+        if(number>0):
+            output.append(str(number))
     output = np.array(output)
-    output = output[output >= 0]
+    output = " ".join(output)
     return output.strip()
 
 sentence = "The sunset sets at twelve o'clock"
