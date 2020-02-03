@@ -1,13 +1,12 @@
-import numpy as np
 def alphabet_position(input_string):
     input_string = input_string.lower()
     output = []
     for character in input_string:
         number = ord(character) - 96
-        output.append(number)
-    output = np.array(output)
-    output = output[output >= 0]
-    return print(output)
+        if(number>0):
+            output.append(str(number))
+    output = " ".join(output)
+    return output.strip()
 
 sentence = "The sunset sets at twelve o'clock"
 
