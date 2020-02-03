@@ -1,10 +1,15 @@
 def validate_pin(pin):
     try:
         int(pin)
-        list(pin)
-        if(len(pin) == 4 or len(pin) == 6):
+        length = list(map(int, str(pin)))
+        if(len(length) == 4 or len(length) == 6):
             return True
         else:
             return False
     except ValueError:
         return False
+
+if validate_pin(1343) == True:
+    print("True")
+else:
+    print("False")
