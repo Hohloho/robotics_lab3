@@ -8,8 +8,3 @@ def validate_pin(pin):
             return False
     except ValueError:
         return False
-
-if validate_pin(1343) == True:
-    print("True")
-else:
-    print("False")
